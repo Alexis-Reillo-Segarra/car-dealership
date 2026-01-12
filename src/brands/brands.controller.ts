@@ -29,6 +29,6 @@ export class BrandsController {
 
   @Delete(':id')
   remove(@Param('id', new ParseUUIDPipe({ version: '4' })) id: string) {
-    return this.brandsService.remove(+id);
+    return this.brandsService.remove(id);
   }
 }
